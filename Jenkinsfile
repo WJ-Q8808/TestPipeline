@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-       BranchName="master"
+       BranchName="F2048"
    }
    stages {
       stage('Start build') {
@@ -22,11 +22,12 @@ pipeline {
            sleep 15
            sh "pwd"
            echo "1runing master"
+           sh "pwd"
          }
       }
       stage('Test runing'){
          when {
-            branch 'master'
+            branch 'F2048'
          }
          steps {
            //sleep 15
@@ -37,7 +38,7 @@ pipeline {
          environment {Description="This is "}
          steps{
             script{
-               if (env.GIT_BRANCH == 'origin/master'){
+               if (env.GIT_BRANCH == 'origin/F2048'){
                   echo "${Description}${BranchName}"
                   //sleep 25
                   sh "ls"
