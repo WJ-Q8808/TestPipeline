@@ -40,7 +40,7 @@ pipeline {
             script{
                if (env.GIT_BRANCH == 'origin/F2048'){
                   echo "${Description}${BranchName}"
-                  //sleep 25
+                  sleep 25
                   sh "ls"
                }
             }
