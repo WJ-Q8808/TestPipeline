@@ -13,7 +13,6 @@ pipeline {
                //sh 'ps'
             //}
             echo 'Build runing'
-            //sh "ps -a"
          }
       }
       stage('Code review'){
